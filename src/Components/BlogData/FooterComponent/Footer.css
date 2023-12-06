@@ -1,0 +1,42 @@
+.footer {
+    background-color: #616161;
+    padding: 32px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.Previous {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.next {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+}
+.next:hover{
+background-color: #ccc;
+
+}
+.Previous:hover{
+background-color: #ccc;
+
+}
+.copyRight{
+    
+    color: #fff;
+    font-size: 15px;
+}

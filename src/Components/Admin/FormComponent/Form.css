@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.adminPreview{
+    margin: 0 0 0 auto;
+    width:55% ;
+}
+.blogForm
+{
+    display: flex;
+}
+.formAdmin{
+   position: fixed;
+    width: 45%;
+}
+.signup-actions {
+    background-color: #dbe7e7a8;
+    border-radius: 15px;
+    padding: 20px 50px;
+    height: 84vh;
+  overflow-y: auto;
+    
+}
+.signup-actions::-webkit-scrollbar{
+display: none;
+}
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input label {
+    color: #181818;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.42px;
+}
+
+.input textarea {
+    height: 100px;
+    max-width: 570px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid transparent;
+}
+
+.input input {
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid transparent;
+}
+
+
+.Signup {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    background: #e0c7c7;
+    color: #FFF;
+    border: .5px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,21 @@
+.NameCard{
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+}
+.NameCard img{
+    width: 100%;
+    display: block;
+}
+.NameCard h4{
+font-weight: 600;
+font-size: 20px;
+}
+.titleName{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.cardDiscription{
+    padding: 10px;
+
+}
