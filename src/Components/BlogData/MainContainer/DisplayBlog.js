@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState ,useContext} from "react";
 import { formatDistanceToNow } from "date-fns";
 import "./DisplayBlog.css";
+import Appcontext from "../../../contexts/AppContext";
 
 function DisplayBlog({ data }) {
+
+const {currentPage,itemPerPAge}=useContext(Appcontext);
 
   const [expandedMap, setExpandedMap] = useState({});
 
@@ -27,9 +30,14 @@ function DisplayBlog({ data }) {
     return formatDistanceToNow(parsedTimestamp, { addSuffix: true });
   };
 
+const indexofLastPage=currentPage*itemPerPAge;
+const indexofFirstPage=indexofLastPage-itemPerPAge;
+const currentBlogs=data.slice(indexofFirstPage,indexofLastPage);
+
+
   return (
     <div>
-      {data.map((blogItem) => (
+      {currentBlogs.map((blogItem) => (
         <div className="displayBlog" key={blogItem.id}>
           <div className="imageContainer">
             <img src={blogItem.imageURL} alt="Blog" />
@@ -51,7 +59,7 @@ function DisplayBlog({ data }) {
           <div className="blogFooter">
             <div className="blogFooterBtn">
               <button onClick={() => toggleReadMore(blogItem.id)}>
-                <b>{expandedMap[blogItem.id] ? "Read Less" : "Read More »"}</b>
+                <b>{expandedMap[blogItem.id] ? "Read Less « " : "Read More »"}</b>
               </button>
             </div>
             <div className="commentSection">

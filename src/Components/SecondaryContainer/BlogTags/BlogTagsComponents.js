@@ -1,25 +1,12 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import "./BlogTags.css";
 import AppContext from "../../../contexts/AppContext";
 
-function BlogTagsComponents({ tagSetData }) {
-  const { data } = useContext(AppContext);
-  const [selectedTag, setSelectedTag] = useState(null);
-
+function BlogTagsComponents() {
+  const { data,selectedTag,setSelectedTag } = useContext(AppContext);
   const handleTagClick = (tag) => {
     setSelectedTag(tag);
   };
-
-  // Filter blog posts based on the selected tag
-  const filteredBlogs = selectedTag
-    ? data.filter((blog) => blog.tags.includes(selectedTag))
-    : data;
-   
-
-  useEffect(() => {
-    // Call tagSetData inside useEffect to avoid infinite loop
-    tagSetData(filteredBlogs);
-  }, [filteredBlogs, tagSetData]);
 
   return (
     <div className="BlogTagsComponent">

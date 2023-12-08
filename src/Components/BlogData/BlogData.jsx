@@ -1,24 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Footer from "./FooterComponent/Footer";
 import Header from "./HeaderComponent/Header";
 import DisplayBlog from "./MainContainer/DisplayBlog";
 import SecondaryComponents from "../SecondaryContainer/SecondaryComponents";
+import Appcontext from "../../contexts/AppContext";
 
 const BlogData = () => {
-  const [tagData, setTagData] = useState([]);
-
-  function tagSetData(data) {
-    setTagData(data);
- 
-  }
-
+  const {filteredBlogs}=useContext(Appcontext)
   return (
     <div>
       <div className="container">
         <Header />
         <div className="mainSection">
-          <DisplayBlog data={tagData} />
-          <SecondaryComponents tagSetData={tagSetData} />
+          <DisplayBlog data={filteredBlogs} />
+          <SecondaryComponents  />
         </div>
       </div>
       <Footer />
